@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
+import { UserProvider } from './context'
 
 
 const UserProvider = ({ children }) => {
@@ -10,9 +10,9 @@ const UserProvider = ({ children }) => {
 
 
     return (
-        <UserContext.Provider value={name, age, happyBirthday}>
+        <UserProvider.Provider value={name, age, happyBirthday}>
             {children}
-        </UserContext.Provider>
+        </UserProvider.Provider>
     )
 }
 
